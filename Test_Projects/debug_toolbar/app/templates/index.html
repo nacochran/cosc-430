@@ -1,0 +1,20 @@
+<!-- app/templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>Hello, {{ user }}!!!</h1>
+	  {% if user == 'John' %}
+		<p>Test</p>
+		{% endif %}
+
+		<ul>
+			{% for name in names: %}
+			<li>{{ name }}</li>
+			{% endfor %}
+		</ul>
+{% endblock %}
+
+{% block body %}
+Hello, World!
+{% endblock %}
